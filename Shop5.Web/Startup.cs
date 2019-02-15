@@ -5,11 +5,14 @@ namespace Shop5.Web
     using Microsoft.AspNetCore.Builder;
     using Microsoft.AspNetCore.Hosting;
     using Microsoft.AspNetCore.Http;
+    using Microsoft.AspNetCore.Identity;
     using Microsoft.AspNetCore.Mvc;
     using Microsoft.EntityFrameworkCore;
     using Microsoft.Extensions.Configuration;
     using Microsoft.Extensions.DependencyInjection;
-    using Shop5.Web.Data;
+    using Data;
+    using Data.Entities;
+    using Helpers;
 
     public class Startup
     {
@@ -24,6 +27,18 @@ namespace Shop5.Web
         public void ConfigureServices(IServiceCollection services)
         {
 
+            services.AddIdentity<User, IdentityRole>(cfg =>
+            {
+                cfg.User.RequireUniqueEmail = true;
+                cfg.Password.RequireDigit = false;
+                cfg.Password.RequiredUniqueChars = 0;
+                cfg.Password.RequireLowercase = false;
+                cfg.Password.RequireNonAlphanumeric = false;
+                cfg.Password.RequireUppercase = false;
+            })
+        .AddEntityFrameworkStores<DataContext>();
+
+
             services.AddDbContext<DataContext>(cfg =>
             {
                 cfg.UseSqlServer(this.Configuration.GetConnectionString("DefaultConnection"));
@@ -31,7 +46,8 @@ namespace Shop5.Web
 
             services.AddTransient<SeedDb>();
 
-            services.AddScoped<IRepository, Repository>();
+            services.AddScoped<IProductRepository, ProductRepository>();
+            services.AddScoped<IUserHelper, UserHelper>();
 
             services.Configure<CookiePolicyOptions>(options =>
             {
@@ -59,6 +75,7 @@ namespace Shop5.Web
 
             app.UseHttpsRedirection();
             app.UseStaticFiles();
+            app.UseAuthentication();
             app.UseCookiePolicy();
 
             app.UseMvc(routes =>
