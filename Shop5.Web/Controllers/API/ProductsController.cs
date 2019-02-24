@@ -28,7 +28,7 @@ namespace Shop5.Web.Controllers.API
         {
             try
             {
-                return this.Ok(this.productRepository.GetAll());
+                return this.Ok(this.productRepository.GetAllWithUsers());
             }
             catch (Exception ex)
             {
