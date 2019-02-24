@@ -4,7 +4,7 @@
     using Microsoft.AspNetCore.Identity;
     using System.Threading.Tasks;
 
-    public class UserHelper : IUserHelper
+    public class UserHelper: IUserHelper
     {
         private readonly UserManager<User> userManager;
 
@@ -16,6 +16,11 @@
         public async Task<IdentityResult> AddUserAsync(User user, string password)
         {
             return await this.userManager.CreateAsync(user, password);
+        }
+
+        public Task<User> GetUserByEmail(string v)
+        {
+            throw new System.NotImplementedException();
         }
 
         public async Task<User> GetUserByEmailAsync(string email)

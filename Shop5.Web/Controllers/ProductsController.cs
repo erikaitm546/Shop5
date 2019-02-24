@@ -65,7 +65,9 @@ namespace Shop5.Web.Controllers
 
                 if (view.ImageFile != null && view.ImageFile.Length > 0)
                 {
-                    path = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot\\images\\Products", view.ImageFile.FileName);
+                    path = Path.Combine(Directory.GetCurrentDirectory(),
+                        "wwwroot\\images\\Products", 
+                        view.ImageFile.FileName);
 
                     using (var stream = new FileStream(path, FileMode.Create))
                     {
