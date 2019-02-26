@@ -3,12 +3,12 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{AFA66B91-30D1-42C4-A62A-891CBEE5C726}</ProjectGuid>
+    <ProjectGuid>{B1338DEA-3537-4EB2-8C80-F0DC5510EF1C}</ProjectGuid>
     <ProjectTypeGuids>{EFBA0AD7-5A72-4C68-AF49-83D382785DCF};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <TemplateGuid>{c9e5eea5-ca05-42a1-839b-61506e0a37df}</TemplateGuid>
     <OutputType>Library</OutputType>
-    <RootNamespace>Shop5.UIForms.Droid</RootNamespace>
-    <AssemblyName>Shop5.UIForms.Android</AssemblyName>
+    <RootNamespace>Shop.UIForns.Droid</RootNamespace>
+    <AssemblyName>Shop.UIForns.Android</AssemblyName>
     <AndroidApplication>True</AndroidApplication>
     <AndroidResgenFile>Resources\Resource.designer.cs</AndroidResgenFile>
     <AndroidResgenClass>Resource</AndroidResgenClass>
@@ -92,9 +92,9 @@
     <Folder Include="Resources\drawable-xxxhdpi\" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Shop5.UIForms\Shop5.UIForms.csproj">
-      <Project>{B3FF27FC-DE46-4F15-AA50-0C9D91BC4B88}</Project>
-      <Name>Shop5.UIForms</Name>
+    <ProjectReference Include="..\Shop.UIForns\Shop.UIForns.csproj">
+      <Project>{EF5B7BEA-6B98-4969-AEDA-9CC1E86BB2BE}</Project>
+      <Name>Shop.UIForns</Name>
     </ProjectReference>
   </ItemGroup>
  <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />

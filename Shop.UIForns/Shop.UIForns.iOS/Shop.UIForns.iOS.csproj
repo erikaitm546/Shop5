@@ -5,13 +5,13 @@
     <Platform Condition=" '$(Platform)' == '' ">iPhoneSimulator</Platform>
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{CA5B879A-F6EA-4547-A600-473C1AC23734}</ProjectGuid>
+    <ProjectGuid>{2F3FF07F-A9CF-4A05-8C65-7CCC833475CB}</ProjectGuid>
     <ProjectTypeGuids>{FEACFBD2-3405-455C-9665-78FE426C6842};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <TemplateGuid>{6143fdea-f3c2-4a09-aafa-6e230626515e}</TemplateGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>Shop5.UIForms.iOS</RootNamespace>
+    <RootNamespace>Shop.UIForns.iOS</RootNamespace>
     <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
-    <AssemblyName>Shop5.UIForms.iOS</AssemblyName>
+    <AssemblyName>Shop.UIForns.iOS</AssemblyName>
     <MtouchHttpClientHandler>NSUrlSessionHandler</MtouchHttpClientHandler>
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
@@ -127,9 +127,9 @@
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <ItemGroup>
-    <ProjectReference Include="..\Shop5.UIForms\Shop5.UIForms.csproj">
-      <Project>{B3FF27FC-DE46-4F15-AA50-0C9D91BC4B88}</Project>
-      <Name>Shop5.UIForms</Name>
+    <ProjectReference Include="..\Shop.UIForns\Shop.UIForns.csproj">
+      <Project>{EF5B7BEA-6B98-4969-AEDA-9CC1E86BB2BE}</Project>
+      <Name>Shop.UIForns</Name>
     </ProjectReference>
   </ItemGroup>
 </Project>
