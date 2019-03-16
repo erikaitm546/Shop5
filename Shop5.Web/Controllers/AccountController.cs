@@ -5,6 +5,7 @@
     using Helpers;
     using Microsoft.AspNetCore.Identity;
     using Microsoft.AspNetCore.Mvc;
+    using Microsoft.Extensions.Configuration;
     using Models;
     using Shop5.Web.Data.Entities;
 
@@ -12,7 +13,11 @@
     {
         private readonly IUserHelper userHelper;
 
-        public AccountController(IUserHelper userHelper)
+        public AccountController(
+            IUserHelper userHelper,
+
+            IConfiguration configuration
+            )
         {
             this.userHelper = userHelper;
         }
